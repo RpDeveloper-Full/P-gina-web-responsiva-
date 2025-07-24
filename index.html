@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Web Responsiva</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #005fa3;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    nav a:hover {
+      background: #004f8a;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .main {
+      flex: 3;
+      padding: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        padding: 10px;
+        border-top: 1px solid #0077cc;
+      }
+
+      .sidebar {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mi Página Web Responsiva</h1>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Acerca de</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <div class="container">
+    <div class="main">
+      <h2>Contenido Principal</h2>
+      <p>Este es un diseño que se adapta a diferentes tamaños de pantalla usando solo HTML y CSS.</p>
+    </div>
+    <div class="sidebar">
+      <h3>Barra lateral</h3>
+      <p>Contenido adicional o enlaces.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Mi Sitio Web</p>
+  </footer>
+</body>
+</html>
